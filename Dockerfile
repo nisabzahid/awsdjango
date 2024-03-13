@@ -13,4 +13,4 @@ RUN adduser --disabled-password --no-create-home django
 RUN python manage.py migrate
 
 USER django 
-CMD ["uwsgi", "--socket", ":9000", "--workers", "4", "--master", "--enabled-threads","--module", "app.wsgi"]
+CMD ["uwsgi", "--socket", ":9000", "--workers", "4", "--master", "--enable-threads","--module", "app.wsgi"]
